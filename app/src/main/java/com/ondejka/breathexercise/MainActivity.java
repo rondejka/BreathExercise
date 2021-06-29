@@ -523,7 +523,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 updateCountdownTextView((int) (millisUntilFinished / 1000));
 
-                if ((millisUntilFinished < 5000) & (millisUntilFinished > 1000)) {
+                if ((millisUntilFinished < 10000) & (millisUntilFinished > 1000)) {
 //                    MediaPlayer mplayerGong = MediaPlayer.create(getApplicationContext(), R.raw.a_tone);
                     if (mplayerGong.isPlaying()) {
                         try {

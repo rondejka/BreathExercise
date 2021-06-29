@@ -1,0 +1,5 @@
+versionapp - predlzit z 10 na 20
+pipanie predlzit zo 4 na 10 sek
+login dorobit
+sign in dokoncit
+prerobit uvodne view na 3 taby dole
