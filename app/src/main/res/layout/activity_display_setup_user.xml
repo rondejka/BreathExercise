@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    tools:context=".DisplaySetupUser"
+    >
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".DisplaySetupParameters">
+
+    <!--Screen name-->
+    <TextView
+        android:id="@+id/screenNameTextView"
+        style="@style/SetupParamHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="USER SETUP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="25dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screenNameTextView" />
+
+
+    <!--Log in as a Differenf User-->
+    <TextView
+        android:id="@+id/textViewLoginUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="changeUser_loginUser"
+        android:text="Log in as a Differenf User"
+        android:textColor="#1539FF"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+
+    <!--Sign up a New User -->
+    <TextView
+        android:id="@+id/textViewChangeUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="changeUser_NewUser"
+        android:text="Sign up a New User"
+        android:textColor="#1539FF"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+
+
+    <!--Email label-->
+    <TextView
+        android:id="@+id/EmailLabel"
+        style="@style/SetupParamTextDescr"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Email:"
+        android:textColor="#96969A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <!--Email - input field-->
+    <EditText
+        android:id="@+id/EmailEditText"
+        style="@style/SetupParamPersonTextValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:ems="17"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:text="Email"
+        android:textColor="#96969A"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@+id/EmailLabel"
+        app:layout_constraintTop_toBottomOf="@+id/EmailLabel" />
+
+    <!--Password label-->
+    <TextView
+        android:id="@+id/PasswordLabel"
+        style="@style/SetupParamTextDescr"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#96969A"
+        android:text="Password:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailEditText" />
+
+    <!--Password - input field-->
+    <EditText
+        android:id="@+id/PasswordEditText"
+        style="@style/SetupParamPersonTextValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textPassword"
+        android:text="start123"
+        android:textColor="#96969A"
+        app:layout_constraintStart_toStartOf="@+id/PasswordLabel"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordLabel" />
+
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        app:layout_constraintEnd_toStartOf="@id/buttonCancel"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordEditText" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@id/buttonConfirm"
+        app:layout_constraintTop_toTopOf="@+id/buttonConfirm" />
+
+
+
+    <View
+        android:id="@+id/dividerSound01"
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="75dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordEditText" />
+
+
+    <!--First Name label-->
+    <TextView
+        android:id="@+id/FirstNameLabel"
+        style="@style/SetupParamTextDescr"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:text="First Name:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerSound01" />
+
+    <!--First Name - input field-->
+    <EditText
+        android:id="@+id/FirstNameEditText"
+        style="@style/SetupParamPersonTextValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="textPersonName"
+        android:text="First_name"
+        app:layout_constraintStart_toStartOf="@+id/FirstNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/FirstNameLabel" />
+
+    <!--Last Name label-->
+    <TextView
+        android:id="@+id/LastNameLabel"
+        style="@style/SetupParamTextDescr"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Last Name:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstNameEditText" />
+
+    <!--First Name - input field-->
+    <EditText
+        android:id="@+id/LastNameEditText"
+        style="@style/SetupParamPersonTextValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="textPersonName"
+        android:text="Last_name"
+        app:layout_constraintStart_toStartOf="@+id/LastNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/LastNameLabel" />
+
+    <!--Gender label-->
+    <TextView
+        android:id="@+id/GenderLabel"
+        style="@style/SetupParamTextDescr"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Gender:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LastNameEditText" />
+
+    <!--First Name - input field-->
+    <EditText
+        android:id="@+id/GenderEditText"
+        style="@style/SetupParamPersonTextValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:inputType="textPersonName"
+        android:text="M/W"
+        app:layout_constraintStart_toStartOf="@+id/GenderLabel"
+        app:layout_constraintTop_toBottomOf="@+id/GenderLabel" />
+
+    <!--Year of Birth label-->
+    <TextView
+        android:id="@+id/BirthYearLabel"
+        style="@style/SetupParamTextDescr"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Year of Birth:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GenderEditText" />
+
+    <!--First Name - input field-->
+    <EditText
+        android:id="@+id/BirthYearEditText"
+        style="@style/SetupParamPersonTextValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="textPersonName"
+        android:text="YYYY"
+        app:layout_constraintStart_toStartOf="@+id/BirthYearLabel"
+        app:layout_constraintTop_toBottomOf="@+id/BirthYearLabel" />
+
+    <!--Final Field  label-->
+    <TextView
+        android:id="@+id/FinalFieldLabel"
+        style="@style/SetupParamTextDescr"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="----------------------------------------------"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BirthYearEditText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>

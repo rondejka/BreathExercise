@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/userTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="User"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="@+id/icon" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:text="Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="0dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/userTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userTextView" />
+
+    <TextView
+        android:id="@+id/time1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="0:00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/icon"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+    <TextView
+        android:id="@+id/time2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="0:00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/time1TextView"
+        app:layout_constraintTop_toTopOf="@+id/time1TextView" />
+
+    <TextView
+        android:id="@+id/time3TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="0:00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/time2TextView"
+        app:layout_constraintTop_toTopOf="@+id/time2TextView" />
+
+    <TextView
+        android:id="@+id/time4TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="0:00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/time3TextView"
+        app:layout_constraintTop_toTopOf="@+id/time3TextView" />
+
+    <!-- Average Maximums -->
+    <TextView
+        android:id="@+id/descrMax4TimeTextView"
+        style="@style/MaxHistoryDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="avg"
+        app:layout_constraintStart_toStartOf="@+id/max4TimeTextView"
+        app:layout_constraintBottom_toTopOf="@+id/max4TimeTextView" />
+
+    <TextView
+        android:id="@+id/max4TimeTextView"
+        style="@style/MaxHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="@+id/time1TextView"
+        app:layout_constraintTop_toBottomOf="@+id/time1TextView" />
+
+    <TextView
+        android:id="@+id/descrMax3TimeTextView"
+        style="@style/MaxHistoryDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="max3 \navg"
+        app:layout_constraintStart_toStartOf="@+id/max3TimeTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/descrMax4TimeTextView" />
+
+    <TextView
+        android:id="@+id/max3TimeTextView"
+        style="@style/MaxHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/max4TimeTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/max4TimeTextView" />
+
+    <TextView
+        android:id="@+id/descrMax2TimeTextView"
+        style="@style/MaxHistoryDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="max2 \navg"
+        app:layout_constraintStart_toStartOf="@+id/max2TimeTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/descrMax4TimeTextView" />
+
+    <TextView
+        android:id="@+id/max2TimeTextView"
+        style="@style/MaxHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/max3TimeTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/max3TimeTextView" />
+
+    <TextView
+        android:id="@+id/descrMax1TimeTextView"
+        style="@style/MaxHistoryDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="max"
+        app:layout_constraintStart_toStartOf="@+id/max1TimeTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/descrMax4TimeTextView" />
+
+    <TextView
+        android:id="@+id/max1TimeTextView"
+        style="@style/MaxHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/max2TimeTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/max2TimeTextView" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/max4TimeTextView" />
+
+    <ImageView
+        android:id="@+id/trophy1ImageView"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25px"
+        app:layout_constraintStart_toStartOf="@+id/max4TimeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/max4TimeTextView" />
+
+    <ImageView
+        android:id="@+id/trophy2ImageView"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25px"
+        app:layout_constraintStart_toStartOf="@+id/max3TimeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/max3TimeTextView" />
+
+    <ImageView
+        android:id="@+id/trophy3ImageView"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25px"
+        app:layout_constraintStart_toStartOf="@+id/max2TimeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/max2TimeTextView" />
+
+    <ImageView
+        android:id="@+id/trophy4ImageView"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25px"
+        app:layout_constraintStart_toStartOf="@+id/max1TimeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/max1TimeTextView" />
+
+    <ImageView
+        android:id="@+id/trophy11ImageView"
+        android:layout_width="45px"
+        android:layout_height="45px"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="0px"
+        app:layout_constraintStart_toEndOf="@+id/trophy4ImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/dateTextView" />
+
+    <TextView
+        android:id="@+id/trophy11descrTextView"
+        style="@style/MaxHistoryDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="0px"
+        app:layout_constraintStart_toEndOf="@+id/trophy11ImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/trophy11ImageView" />
+
+    <ImageView
+        android:id="@+id/trophy22ImageView"
+        android:layout_width="45px"
+        android:layout_height="45px"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/trophy11ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/trophy11ImageView" />
+
+    <TextView
+        android:id="@+id/trophy22descrTextView"
+        style="@style/MaxHistoryDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="0px"
+        app:layout_constraintStart_toEndOf="@+id/trophy22ImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/trophy22ImageView" />
+
+    <ImageView
+        android:id="@+id/trophy33ImageView"
+        android:layout_width="45px"
+        android:layout_height="45px"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/trophy22ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/trophy22ImageView" />
+
+    <TextView
+        android:id="@+id/trophy33descrTextView"
+        style="@style/MaxHistoryDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="0px"
+        app:layout_constraintStart_toEndOf="@+id/trophy33ImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/trophy33ImageView" />
+
+    <ImageView
+        android:id="@+id/trophy44ImageView"
+        android:layout_width="45px"
+        android:layout_height="45px"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/trophy33ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/trophy33ImageView" />
+
+    <TextView
+        android:id="@+id/trophy44descrTextView"
+        style="@style/MaxHistoryDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="0px"
+        app:layout_constraintStart_toEndOf="@+id/trophy44ImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/trophy44ImageView" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

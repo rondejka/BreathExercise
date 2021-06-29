@@ -1,0 +1,103 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Setup Parameters Screen -->
+    <style name="SetupParamHead" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="SetupParamVersion" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SetupParamTextValue" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="SetupParamPersonTextValue" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">23sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <style name="SetupParamPersonTextValueUnAvailable" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textColor">#96969A</item>
+    </style>
+
+    <style name="SetupParamTextDescr" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- MAIN Screen -->
+    <style name="TimeMain" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="TimeShadowMain" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">#B2C248</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <style name="TimeAvgMain" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">#DE3163</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <!-- History Screen -->
+    <style name="NickNameHistory" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:text">TextView</item>
+    </style>
+
+    <style name="DateHistory" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:text">TextView</item>
+    </style>
+
+    <style name="TimesHistory" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">TextView</item>
+        <item name="android:textColor">#737373</item>
+    </style>
+
+    <style name="MaxHistory" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginStart">70dp</item>
+        <item name="android:text">0:00</item>
+    </style>
+
+    <style name="MaxHistoryDescr" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+
+
+</resources>

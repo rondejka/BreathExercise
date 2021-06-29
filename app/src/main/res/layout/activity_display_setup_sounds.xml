@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    tools:context=".DisplaySetupSounds">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        tools:context=".DisplaySetupSounds">
+
+        <!--Screen name-->
+        <TextView
+            android:id="@+id/screenNameTextView"
+            style="@style/SetupParamHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="SOUNDS SETUP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- Voice -->
+        <TextView
+            android:id="@+id/VoiceLabel"
+            style="@style/SetupParamTextValue"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:text="Wim's voice:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/screenNameTextView" />
+
+        <CheckBox
+            android:id="@+id/VoiceCheckBox"
+            style="@style/SetupParamTextDescr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="0dp"
+            android:onClick="onCheckboxClicked"
+            app:layout_constraintStart_toStartOf="@+id/VoiceLabel"
+            app:layout_constraintTop_toTopOf="@+id/VoiceLabel" />
+
+        <View
+            android:id="@+id/dividerSound01"
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="40dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/VoiceLabel" />
+
+
+
+        <!--Gong  -->
+        <TextView
+            android:id="@+id/GongLabel"
+            style="@style/SetupParamTextValue"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:text="Ping and Gong:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerSound01" />
+
+        <CheckBox
+            android:id="@+id/GongCheckBox"
+            style="@style/SetupParamTextDescr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="0dp"
+            android:onClick="onCheckboxClicked"
+            app:layout_constraintStart_toStartOf="@+id/GongLabel"
+            app:layout_constraintTop_toTopOf="@+id/GongLabel" />
+
+        <View
+            android:id="@+id/dividerSound02"
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="40dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GongLabel" />
+
+
+        <!-- Music -->
+        <TextView
+            android:id="@+id/MusicLabel"
+            style="@style/SetupParamTextValue"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:text="Background music:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerSound02" />
+
+        <TextView
+            android:id="@+id/Music1Label"
+            style="@style/SetupParamTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/MusicLabel"
+            app:layout_constraintTop_toBottomOf="@+id/MusicLabel" />
+
+        <TextView
+            android:id="@+id/Music2Label"
+            style="@style/SetupParamTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Healing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/MusicLabel"
+            app:layout_constraintTop_toBottomOf="@+id/Music1Label" />
+
+        <TextView
+            android:id="@+id/Music3Label"
+            style="@style/SetupParamTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Mix"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/MusicLabel"
+            app:layout_constraintTop_toBottomOf="@+id/Music2Label" />
+
+
+        <RadioGroup
+            android:id="@+id/musicRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/MusicLabel"
+            app:layout_constraintTop_toBottomOf="@+id/MusicLabel">
+
+            <RadioButton
+                android:id="@+id/musicRadioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onMusicRadioButtonClicked"
+                app:layout_constraintStart_toStartOf="@+id/MusicLabel"
+                app:layout_constraintTop_toBottomOf="@+id/MusicLabel" />
+
+            <RadioButton
+                android:id="@+id/musicRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onMusicRadioButtonClicked"
+                app:layout_constraintStart_toStartOf="@+id/MusicLabel"
+                app:layout_constraintTop_toBottomOf="@+id/MusicLabel" />
+
+            <RadioButton
+                android:id="@+id/musicRadioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onMusicRadioButtonClicked"
+                app:layout_constraintStart_toStartOf="@+id/MusicLabel"
+                app:layout_constraintTop_toBottomOf="@+id/MusicLabel" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/dividerSound03"
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="40dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/musicRadioGroup" />
+
+
+
+
+        <!-- Breathing Sound -->
+        <TextView
+            android:id="@+id/BreathingLabel"
+            style="@style/SetupParamTextValue"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:text="Breathing:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerSound03" />
+
+        <TextView
+            android:id="@+id/Breathing1Label"
+            style="@style/SetupParamTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/BreathingLabel"
+            app:layout_constraintTop_toBottomOf="@+id/BreathingLabel" />
+
+        <TextView
+            android:id="@+id/Breathing2Label"
+            style="@style/SetupParamTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Sound 1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/BreathingLabel"
+            app:layout_constraintTop_toBottomOf="@+id/Breathing1Label" />
+
+        <TextView
+            android:id="@+id/Breathing3Label"
+            style="@style/SetupParamTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Sound 2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/BreathingLabel"
+            app:layout_constraintTop_toBottomOf="@+id/Breathing2Label" />
+
+        <TextView
+            android:id="@+id/Breathing4Label"
+            style="@style/SetupParamTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Wim's sound"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/BreathingLabel"
+            app:layout_constraintTop_toBottomOf="@+id/Breathing3Label" />
+
+
+        <RadioGroup
+            android:id="@+id/breathingRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/BreathingLabel"
+            app:layout_constraintTop_toBottomOf="@+id/BreathingLabel">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onSoundRadioButtonClicked"
+                app:layout_constraintStart_toStartOf="@+id/BreathingLabel"
+                app:layout_constraintTop_toBottomOf="@+id/BreathingLabel" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onSoundRadioButtonClicked"
+                app:layout_constraintStart_toStartOf="@+id/BreathingLabel"
+                app:layout_constraintTop_toBottomOf="@+id/BreathingLabel" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onSoundRadioButtonClicked"
+                app:layout_constraintStart_toStartOf="@+id/BreathingLabel"
+                app:layout_constraintTop_toBottomOf="@+id/BreathingLabel" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onSoundRadioButtonClicked"
+                app:layout_constraintStart_toStartOf="@+id/BreathingLabel"
+                app:layout_constraintTop_toBottomOf="@+id/BreathingLabel" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/dividerSound04"
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="40dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/breathingRadioGroup" />
+
+
+        <!--Final Field  label-->
+        <TextView
+            android:id="@+id/FinalFieldLabel"
+            style="@style/SetupParamPersonTextValue"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:text="----------------------------------------------"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerSound04" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
