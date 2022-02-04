@@ -439,6 +439,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     //////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * Called when the user taps the FINISH button
+     */
+    public void finishCountDown(View view) {
+
+    }
+
+    //////////////////////////////////////////////////////////////////////////////
     private void initExercise() {
         Log.i("initExercise_01", "OK");
 

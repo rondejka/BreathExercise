@@ -1,5 +1,19 @@
+---
+NEW
+---
+lokalne data poslat hromadne po pripojeni
+verziu bez zvuku dychania
 versionapp - predlzit z 10 na 20
-pipanie predlzit zo 4 na 10 sek
 login dorobit
 sign in dokoncit
 prerobit uvodne view na 3 taby dole
+--------------------------------
+---
+BUG
+---
+user bez mena: apka spadne po kliknuti na WEB
+--------------------------------------
+----
+DONE
+----
+pipanie predlzit zo 4 na 10 sek - OK
