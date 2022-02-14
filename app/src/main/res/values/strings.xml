@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Breath Excercise</string>
+    <string name="app_name">Breath Exercise</string>
     <string name="title_activity_settings">SettingsActivity</string>
 
     <!-- Preference Titles -->
