@@ -1,8 +1,8 @@
 ---
 NEW
 ---
+Button Finish - ulozi dosiahnute casy aj ked nedoslo do konca
 lokalne data poslat hromadne po pripojeni
-verziu bez zvuku dychania
 versionapp - predlzit z 10 na 20
 login dorobit
 sign in dokoncit
@@ -17,3 +17,4 @@ user bez mena: apka spadne po kliknuti na WEB
 DONE
 ----
 pipanie predlzit zo 4 na 10 sek - OK
+verziu bez zvuku dychania
