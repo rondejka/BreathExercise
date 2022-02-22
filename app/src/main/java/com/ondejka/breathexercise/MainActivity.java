@@ -375,6 +375,9 @@ public class MainActivity extends AppCompatActivity {
             timerTexView.setText("");
             breathdownTextView.setText("");
             phase = 0;
+            countDownTimer.cancel();
+            breathsDownTimer.cancel();
+            counterIsActive = false;
 
         }
 
@@ -445,7 +448,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public void finishCountDown(View view) {
         Log.i("finishCountDown_01", "OK");
-        Log.i("finishCountDown", "Finish button pressed.");
 
         //copy from phase 4
         timerTexView.setText("");
@@ -453,6 +455,7 @@ public class MainActivity extends AppCompatActivity {
 
 //        phase = 4;  //set phase like 4. ResetTimer() should work as in phase 4.
         resetTimer();
+        saveScore();
 
         if (!parameters.getMusic().equals("N")) {
             mplayerBackground.stop();

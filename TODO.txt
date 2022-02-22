@@ -1,7 +1,7 @@
 ---
 NEW
 ---
-Buttpn Finish - ulozi dosiahnute casy aj ked nedoslo do konca
+Button Finish - ulozi dosiahnute casy aj ked nedoslo do konca
 lokalne data poslat hromadne po pripojeni
 versionapp - predlzit z 10 na 20
 login dorobit
