@@ -3,7 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_cloud_score.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_db_history_score.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_display_setup_parameters.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_display_setup_sounds.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_display_setup_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_history_score.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_main_backup.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/nav_header.xml" value="0.4" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/rowlayout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExerciseFromGit/app/src/main/res/layout/activity_main.xml" value="0.13551165146909827" />
       </map>
     </option>

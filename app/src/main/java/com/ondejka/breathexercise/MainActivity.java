@@ -63,13 +63,14 @@ public class MainActivity extends AppCompatActivity {
     Boolean counterIsActive = false;
     Button goButton;
     Button stopButton;
+    Button finishButton;
     CountDownTimer countDownTimer;
     CountDownTimer breathsDownTimer;
     SharedPreferences mPrefs;
     private static final String FILE_NAME = "example.txt";
     public Parameters parameters;
     int[] results = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int phase;
+    int phase;  // 0=inic, 1=Deep breathing, 2=Long no breathing, 3=Deep inside, 4=Short no breathing
     boolean timerExit = false;
     int breathsLeft;
     Handler handler;
@@ -200,6 +201,7 @@ public class MainActivity extends AppCompatActivity {
         whileImageView = findViewById(R.id.whileImageView);
         goButton = findViewById(R.id.goButton);
         stopButton = findViewById(R.id.stopButton);
+        finishButton = findViewById(R.id.finishButton);
         timerTexView = findViewById(R.id.countdownTextView);
         breathdownTextView = findViewById(R.id.breathdownTextView);
         stopTextView = findViewById(R.id.stopTextView);
@@ -330,6 +332,7 @@ public class MainActivity extends AppCompatActivity {
 
     //////////////////////////////////////////////////////////////////////////////
     public void resetTimer() {
+
         if (phase == 1) {
             Log.i("resetTimer ", "phase=1");
 
@@ -409,6 +412,7 @@ public class MainActivity extends AppCompatActivity {
 
             resetTimer();
             goButton.setText("START");
+            finishButton.setVisibility(View.INVISIBLE);
             timerTexView.setText("");
             breathdownTextView.setText("");
             phase = 0;
@@ -448,6 +452,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void finishCountDown(View view) {
         Log.i("finishCountDown_01", "OK");
+
+        finishButton.setVisibility(View.INVISIBLE);
 
         //copy from phase 4
         timerTexView.setText("");
@@ -527,6 +533,8 @@ public class MainActivity extends AppCompatActivity {
     //////////////////////////////////////////////////////////////////////////////
     private void firstPhase() {
         phase = 1;
+
+        finishButton.setVisibility(View.VISIBLE);
         round++;
         final MediaPlayer mplayerGong = MediaPlayer.create(getApplicationContext(), R.raw.gong);
 
@@ -654,6 +662,7 @@ public class MainActivity extends AppCompatActivity {
         timerExit = false;
         goButton.setText("STOP");
         goButton.setVisibility(View.INVISIBLE);
+        finishButton.setVisibility(View.INVISIBLE);
         stopButton.setVisibility(View.VISIBLE);
         stopTextView.setVisibility(View.VISIBLE);
 

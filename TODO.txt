@@ -1,7 +1,7 @@
 ---
 NEW
 ---
-Button Finish - ulozi dosiahnute casy aj ked nedoslo do konca
+db mongo dorobit
 lokalne data poslat hromadne po pripojeni
 versionapp - predlzit z 10 na 20
 login dorobit
@@ -12,9 +12,12 @@ prerobit uvodne view na 3 taby dole
 BUG
 ---
 user bez mena: apka spadne po kliknuti na WEB
+Cancel button - v nejakej faze neukonci hudbu
 --------------------------------------
 ----
 DONE
 ----
 pipanie predlzit zo 4 na 10 sek - OK
 verziu bez zvuku dychania
+2.2022 - Button Finish - ulozi dosiahnute casy aj ked nedoslo do konca
+10.11.2022 - Button Finish - zobrazi sa len vo faze 1
