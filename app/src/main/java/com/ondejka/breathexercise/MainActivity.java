@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
     Button goButton;
     Button stopButton;
     Button finishButton;
+    Button exitButton;
     CountDownTimer countDownTimer;
     CountDownTimer breathsDownTimer;
     SharedPreferences mPrefs;
@@ -202,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
         goButton = findViewById(R.id.goButton);
         stopButton = findViewById(R.id.stopButton);
         finishButton = findViewById(R.id.finishButton);
+        exitButton = findViewById(R.id.exitButton);
         timerTexView = findViewById(R.id.countdownTextView);
         breathdownTextView = findViewById(R.id.breathdownTextView);
         stopTextView = findViewById(R.id.stopTextView);
@@ -244,12 +246,14 @@ public class MainActivity extends AppCompatActivity {
 //        round_MAX = 4;
         round_MAX = parameters.getRounds();
 
-        phase = 0;
+//        phase = 0;
         timerSeconds = 0;
         round = 0;
         for (int i = 0; i <= round_MAX; i++) {
             results[i] = 0;
         }
+
+        setPhase0();
 
 
 //        Log.i("registerNewUserTEST", "01");
@@ -374,13 +378,6 @@ public class MainActivity extends AppCompatActivity {
             counterIsActive = false;
 
         } else if (phase == 4) {
-            goButton.setText("START");
-            timerTexView.setText("");
-            breathdownTextView.setText("");
-            phase = 0;
-            countDownTimer.cancel();
-            breathsDownTimer.cancel();
-            counterIsActive = false;
 
         }
 
@@ -403,7 +400,17 @@ public class MainActivity extends AppCompatActivity {
     //////////////////////////////////////////////////////////////////////////////
 
     /**
-     * Called when the user taps the START/CANCEL/STOP button
+     * Called when the user taps the EXIT button
+     */
+    public void exitApp(View view) {
+        this.finishAffinity();
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * Called when the user taps the START/CANCEL button
      */
     public void startCountDown(View view) {
 
@@ -411,11 +418,7 @@ public class MainActivity extends AppCompatActivity {
             Log.i("Button Pressed", "resetTimer, phase 1");
 
             resetTimer();
-            goButton.setText("START");
-            finishButton.setVisibility(View.INVISIBLE);
-            timerTexView.setText("");
-            breathdownTextView.setText("");
-            phase = 0;
+            setPhase0();
 
             if (!parameters.getMusic().equals("N")) {
                 mplayerBackground.stop();
@@ -430,8 +433,21 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (phase == 3) {
             resetTimer();
-            goButton.setText("START");
-            phase = 0;
+            setPhase0();
+
+            if (!parameters.getMusic().equals("N")) {
+                mplayerBackground.stop();
+                mplayerBackground.release();
+            }
+
+        } else if (phase == 4) {
+            resetTimer();
+            setPhase0();
+
+            if (!parameters.getMusic().equals("N")) {
+                mplayerBackground.stop();
+                mplayerBackground.release();
+            }
 
         } else if (phase == 0) {
             Log.i("Button Pressed", "startCountDown");
@@ -469,6 +485,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 
     //////////////////////////////////////////////////////////////////////////////
     private void initExercise() {
@@ -531,10 +549,30 @@ public class MainActivity extends AppCompatActivity {
 
 
     //////////////////////////////////////////////////////////////////////////////
-    private void firstPhase() {
-        phase = 1;
+    private void setPhase0() {
+        phase = 0;
+        exitButton.setVisibility(View.VISIBLE);
+        goButton.setText("START");
+        finishButton.setVisibility(View.INVISIBLE);
+        timerTexView.setText("");
+        breathdownTextView.setText("");
 
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////
+    private void setPhase1() {
+        phase = 1;
+        exitButton.setVisibility(View.INVISIBLE);
         finishButton.setVisibility(View.VISIBLE);
+
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////
+    private void firstPhase() {
+        setPhase1();
+
         round++;
         final MediaPlayer mplayerGong = MediaPlayer.create(getApplicationContext(), R.raw.gong);
 
@@ -655,16 +693,25 @@ public class MainActivity extends AppCompatActivity {
 
 
     //////////////////////////////////////////////////////////////////////////////
-    public void secondPhase() {
-        Log.i("Phase 2", "Started");
+    public void setPhase2() {
         phase = 2;
-        timerSeconds = -1;
-        timerExit = false;
         goButton.setText("STOP");
         goButton.setVisibility(View.INVISIBLE);
         finishButton.setVisibility(View.INVISIBLE);
         stopButton.setVisibility(View.VISIBLE);
         stopTextView.setVisibility(View.VISIBLE);
+        exitButton.setVisibility(View.INVISIBLE);
+
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////
+    public void secondPhase() {
+        Log.i("Phase 2", "Started");
+
+        setPhase2();
+        timerSeconds = -1;
+        timerExit = false;
 
 
         handler = new Handler();
@@ -790,7 +837,6 @@ public class MainActivity extends AppCompatActivity {
                     breathdownTextView.setText("");
 
                     resetTimer();
-//                    saveScore();
                     if (!parameters.getMusic().equals("N")) {
                         mplayerBackground.stop();
                         mplayerBackground.release();
@@ -1492,6 +1538,7 @@ public class MainActivity extends AppCompatActivity {
 
         return timeString;
     }
+
 
 
 }

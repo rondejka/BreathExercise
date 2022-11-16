@@ -5,16 +5,25 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_time"
+            android:checkable="false"
+            android:enabled="true"
             android:icon="@drawable/ic_time_setup"
-            android:title="Breathing" />
+            android:title="Breathing setup"
+            android:visible="true" />
         <item
             android:id="@+id/nav_sounds"
-            android:icon="@drawable/ic_user_setup"
-            android:title="Sounds" />
+            android:checkable="false"
+            android:enabled="true"
+            android:icon="@android:drawable/ic_lock_silent_mode_off"
+            android:title="Sounds"
+            android:visible="true" />
         <item
             android:id="@+id/nav_user"
-            android:icon="@drawable/ic_user_setup"
-            android:title="User" />
+            android:checkable="false"
+            android:enabled="true"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="User"
+            android:visible="true" />
     </group>
 
 </menu>

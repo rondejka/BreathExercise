@@ -12,12 +12,14 @@ prerobit uvodne view na 3 taby dole
 BUG
 ---
 user bez mena: apka spadne po kliknuti na WEB
-Cancel button - v nejakej faze neukonci hudbu
+Cancel button - vo faze 4 neurobi nic
 --------------------------------------
 ----
 DONE
 ----
-pipanie predlzit zo 4 na 10 sek - OK
-verziu bez zvuku dychania
-2.2022 - Button Finish - ulozi dosiahnute casy aj ked nedoslo do konca
+pipanie predlzit zo 4 na 10 sek - done
+verzia bez zvuku dychania - pridane
+2.2022 - Button Finish - ulozi dosiahnute casy aj ked nedoslo do konca - pridane
 10.11.2022 - Button Finish - zobrazi sa len vo faze 1
+11.11.2022 - Cancel button - vo faze 3 neukonci hudbu - opravene - versionName "1.04221111"
+16.11.2022 - exit button - pridany - versionName "1.04221116"
