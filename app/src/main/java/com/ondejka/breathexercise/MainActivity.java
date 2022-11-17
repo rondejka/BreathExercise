@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String FILE_NAME = "example.txt";
     public Parameters parameters;
     int[] results = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int phase;  // 0=inic, 1=Deep breathing, 2=Long no breathing, 3=Deep inside, 4=Short no breathing
+    int phase;  // 0=Inic, 1=Deep breathing, 2=Deep out & hold, 3=Deep in & keep, 4=Out & start breathing
     boolean timerExit = false;
     int breathsLeft;
     Handler handler;
@@ -565,6 +565,8 @@ public class MainActivity extends AppCompatActivity {
         phase = 1;
         exitButton.setVisibility(View.INVISIBLE);
         finishButton.setVisibility(View.VISIBLE);
+        goButton.setVisibility(View.VISIBLE);
+        stopButton.setVisibility(View.INVISIBLE);
 
     }
 
@@ -809,10 +811,21 @@ public class MainActivity extends AppCompatActivity {
 
 
     //////////////////////////////////////////////////////////////////////////////
+    public void setPhase4() {
+        phase = 4;
+        goButton.setVisibility(View.INVISIBLE);
+        finishButton.setVisibility(View.INVISIBLE);
+        stopButton.setVisibility(View.INVISIBLE);
+        exitButton.setVisibility(View.INVISIBLE);
+
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////
     private void fourthPhase() {
         Log.i("fourthPhase 000", "OK");
 
-        phase = 4;
+        setPhase4();
 
         final MediaPlayer mplayerBreathout = MediaPlayer.create(getApplicationContext(), R.raw.breathout);
         mplayerBreathout.start();
@@ -830,13 +843,13 @@ public class MainActivity extends AppCompatActivity {
                 if (round < round_MAX) {
                     firstPhase();
 
-                } else {
+                } else {        //last round
                     //same code as in finishCountDown()
                     Log.i("Phase 4", "End of game.");
-                    timerTexView.setText("");
-                    breathdownTextView.setText("");
 
                     resetTimer();
+                    setPhase0();
+
                     if (!parameters.getMusic().equals("N")) {
                         mplayerBackground.stop();
                         mplayerBackground.release();

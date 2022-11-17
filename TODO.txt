@@ -12,7 +12,6 @@ prerobit uvodne view na 3 taby dole
 BUG
 ---
 user bez mena: apka spadne po kliknuti na WEB
-Cancel button - vo faze 4 neurobi nic
 --------------------------------------
 ----
 DONE
@@ -23,3 +22,4 @@ verzia bez zvuku dychania - pridane
 10.11.2022 - Button Finish - zobrazi sa len vo faze 1
 11.11.2022 - Cancel button - vo faze 3 neukonci hudbu - opravene - versionName "1.04221111"
 16.11.2022 - exit button - pridany - versionName "1.04221116"
+17.11.2022 - Cancel button - vo faze 4 neurobi nic - button skryty vo faze 4 -  - versionName "1.04221117"
