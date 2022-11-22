@@ -56,7 +56,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
     int screenWidth;
     int screenHeihgt;
-    ImageView setupImageView, historyImageView, backgrImageView, whileImageView;
+    ImageView setupImageView, historyImageView, backgrImageView, whileImageView, exitImageView;
     TextView timerTexView, breathdownTextView, stopTextView;
     TextView time01TexView, time02TexView, time03TexView, time04TexView, time05TexView, timeAvgTexView;
     TextView time01ShadowTextView, time02ShadowTextView, time03ShadowTextView, time04ShadowTextView, time05ShadowTextView, timeAvgShadowTextView;
@@ -198,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupImageView = findViewById(R.id.setupImageView);
         historyImageView = findViewById(R.id.historyImageView);
+        exitImageView = findViewById(R.id.exitImageView);
         backgrImageView = findViewById(R.id.backgrImageView);
         whileImageView = findViewById(R.id.whileImageView);
         goButton = findViewById(R.id.goButton);
@@ -552,6 +553,7 @@ public class MainActivity extends AppCompatActivity {
     private void setPhase0() {
         phase = 0;
         exitButton.setVisibility(View.VISIBLE);
+        exitImageView.setVisibility(View.VISIBLE);
         goButton.setText("START");
         finishButton.setVisibility(View.INVISIBLE);
         timerTexView.setText("");
@@ -564,6 +566,7 @@ public class MainActivity extends AppCompatActivity {
     private void setPhase1() {
         phase = 1;
         exitButton.setVisibility(View.INVISIBLE);
+        exitImageView.setVisibility(View.INVISIBLE);
         finishButton.setVisibility(View.VISIBLE);
         goButton.setVisibility(View.VISIBLE);
         stopButton.setVisibility(View.INVISIBLE);
@@ -703,6 +706,7 @@ public class MainActivity extends AppCompatActivity {
         stopButton.setVisibility(View.VISIBLE);
         stopTextView.setVisibility(View.VISIBLE);
         exitButton.setVisibility(View.INVISIBLE);
+        exitImageView.setVisibility(View.INVISIBLE);
 
     }
 
@@ -817,6 +821,7 @@ public class MainActivity extends AppCompatActivity {
         finishButton.setVisibility(View.INVISIBLE);
         stopButton.setVisibility(View.INVISIBLE);
         exitButton.setVisibility(View.INVISIBLE);
+        exitImageView.setVisibility(View.INVISIBLE);
 
     }
 

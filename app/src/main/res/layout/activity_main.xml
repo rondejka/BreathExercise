@@ -51,6 +51,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/web_ico" />
 
+    <ImageView
+        android:id="@+id/exitImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:alpha=".35"
+        android:onClick="exitApp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/exit_ico" />
+
     <Button
         android:id="@+id/buttonSetup"
         android:layout_width="wrap_content"
@@ -76,12 +88,12 @@
         android:id="@+id/goButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
         android:onClick="startCountDown"
         android:text="START"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countdownTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/breathdownTextView" />
 
     <Button
         android:id="@+id/finishButton"

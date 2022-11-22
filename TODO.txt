@@ -7,6 +7,9 @@ versionapp - predlzit z 10 na 20
 login dorobit
 sign in dokoncit
 prerobit uvodne view na 3 taby dole
+priesvitne buttony
+exit button iconu
+usporiadanie buttonov exit a finish zladit
 --------------------------------
 ---
 BUG
@@ -22,4 +25,5 @@ verzia bez zvuku dychania - pridane
 10.11.2022 - Button Finish - zobrazi sa len vo faze 1
 11.11.2022 - Cancel button - vo faze 3 neukonci hudbu - opravene - versionName "1.04221111"
 16.11.2022 - exit button - pridany - versionName "1.04221116"
-17.11.2022 - Cancel button - vo faze 4 neurobi nic - button skryty vo faze 4 -  - versionName "1.04221117"
+17.11.2022 - Cancel button - vo faze 4 neurobi nic - button skryty vo faze 4 - versionName "1.04221117"
+22.11.2022 - GO button prekryval na tablete odpocet - zmeneny layout_constraintTop_toBottomOf na breathdownTextView - versionName "1.04221117"
