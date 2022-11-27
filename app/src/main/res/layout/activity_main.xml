@@ -53,15 +53,14 @@
 
     <ImageView
         android:id="@+id/exitImageView"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="11dp"
         android:layout_marginBottom="10dp"
-        android:alpha=".35"
         android:onClick="exitApp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/exit_ico" />
+        app:srcCompat="@drawable/exit2" />
 
     <Button
         android:id="@+id/buttonSetup"
@@ -91,6 +90,7 @@
         android:layout_marginTop="10dp"
         android:onClick="startCountDown"
         android:text="START"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/breathdownTextView" />
@@ -102,7 +102,7 @@
         android:layout_marginTop="50dp"
         android:onClick="finishCountDown"
         android:text="FINISH"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goButton" />
@@ -114,6 +114,7 @@
         android:layout_marginTop="250dp"
         android:onClick="exitApp"
         android:text="EXIT"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goButton" />
@@ -140,7 +141,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:textSize="70sp"
-        android:text=""
+        android:text="X"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -151,10 +152,50 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:textSize="60sp"
-        android:text=""
+        android:text="X"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countdownTextView" />
+
+    <TextView
+        android:id="@+id/goTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="START"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="startCountDown"
+        app:layout_constraintTop_toBottomOf="@+id/countdownTextView" />
+
+    <TextView
+        android:id="@+id/cancelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:onClick="startCountDown"
+        android:text="Cancel"
+        android:textColor="#000099"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countdownTextView" />
+
+    <TextView
+        android:id="@+id/finishTextViewAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="finishCountDown"
+        android:text="SaveStop"
+        android:textColor="#660000"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancelTextView" />
+
 
     <TextView
         android:id="@+id/time01TextView"

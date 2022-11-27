@@ -57,11 +57,12 @@ public class MainActivity extends AppCompatActivity {
     int screenWidth;
     int screenHeihgt;
     ImageView setupImageView, historyImageView, backgrImageView, whileImageView, exitImageView;
-    TextView timerTexView, breathdownTextView, stopTextView;
+    TextView timerTexView, breathdownTextView;
+    TextView stopTextView, goTextView, cancelTextView, finishTextViewAction;
     TextView time01TexView, time02TexView, time03TexView, time04TexView, time05TexView, timeAvgTexView;
     TextView time01ShadowTextView, time02ShadowTextView, time03ShadowTextView, time04ShadowTextView, time05ShadowTextView, timeAvgShadowTextView;
     Boolean counterIsActive = false;
-    Button goButton;
+//    Button goButton;
     Button stopButton;
     Button finishButton;
     Button exitButton;
@@ -201,13 +202,16 @@ public class MainActivity extends AppCompatActivity {
         exitImageView = findViewById(R.id.exitImageView);
         backgrImageView = findViewById(R.id.backgrImageView);
         whileImageView = findViewById(R.id.whileImageView);
-        goButton = findViewById(R.id.goButton);
+//        goButton = findViewById(R.id.goButton);
         stopButton = findViewById(R.id.stopButton);
         finishButton = findViewById(R.id.finishButton);
         exitButton = findViewById(R.id.exitButton);
         timerTexView = findViewById(R.id.countdownTextView);
         breathdownTextView = findViewById(R.id.breathdownTextView);
+        goTextView = findViewById(R.id.goTextView);
+        cancelTextView = findViewById(R.id.cancelTextView);
         stopTextView = findViewById(R.id.stopTextView);
+        finishTextViewAction = findViewById(R.id.finishTextViewAction);
         time01TexView = findViewById(R.id.time01TextView);
         time02TexView = findViewById(R.id.time02TextView);
         time03TexView = findViewById(R.id.time03TextView);
@@ -360,9 +364,11 @@ public class MainActivity extends AppCompatActivity {
 
             processForTimerExit();
 
-            goButton.setVisibility(View.VISIBLE);
-            goButton.setText("CANCEL");
+//            goButton.setVisibility(View.INVISIBLE);
+//            goButton.setText("CANCEL");
             stopButton.setVisibility(View.INVISIBLE);
+            goTextView.setVisibility((View.INVISIBLE));
+            cancelTextView.setVisibility((View.VISIBLE));
             stopTextView.setVisibility(View.INVISIBLE);
 
             if (round == round_MAX) {
@@ -471,6 +477,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("finishCountDown_01", "OK");
 
         finishButton.setVisibility(View.INVISIBLE);
+        finishTextViewAction.setVisibility(View.INVISIBLE);
 
         //copy from phase 4
         timerTexView.setText("");
@@ -495,7 +502,9 @@ public class MainActivity extends AppCompatActivity {
 
         counterIsActive = true;
         round = 0;
-        goButton.setText("CANCEL");
+//        goButton.setText("CANCEL");
+        goTextView.setVisibility((View.INVISIBLE));
+        cancelTextView.setVisibility((View.VISIBLE));
         clearTextVievs();
         userScore.initUserScore();
 
@@ -552,10 +561,13 @@ public class MainActivity extends AppCompatActivity {
     //////////////////////////////////////////////////////////////////////////////
     private void setPhase0() {
         phase = 0;
-        exitButton.setVisibility(View.VISIBLE);
+        exitButton.setVisibility(View.INVISIBLE);
         exitImageView.setVisibility(View.VISIBLE);
-        goButton.setText("START");
+//        goButton.setText("START");
         finishButton.setVisibility(View.INVISIBLE);
+        finishTextViewAction.setVisibility(View.INVISIBLE);
+        goTextView.setVisibility((View.VISIBLE));
+        cancelTextView.setVisibility((View.INVISIBLE));
         timerTexView.setText("");
         breathdownTextView.setText("");
 
@@ -568,7 +580,10 @@ public class MainActivity extends AppCompatActivity {
         exitButton.setVisibility(View.INVISIBLE);
         exitImageView.setVisibility(View.INVISIBLE);
         finishButton.setVisibility(View.VISIBLE);
-        goButton.setVisibility(View.VISIBLE);
+        finishTextViewAction.setVisibility(View.VISIBLE);
+//        goButton.setVisibility(View.VISIBLE);
+        goTextView.setVisibility(View.INVISIBLE);
+        cancelTextView.setVisibility((View.VISIBLE));
         stopButton.setVisibility(View.INVISIBLE);
 
     }
@@ -700,9 +715,11 @@ public class MainActivity extends AppCompatActivity {
     //////////////////////////////////////////////////////////////////////////////
     public void setPhase2() {
         phase = 2;
-        goButton.setText("STOP");
-        goButton.setVisibility(View.INVISIBLE);
+//        goButton.setVisibility(View.INVISIBLE);
+        goTextView.setVisibility(View.INVISIBLE);
+        cancelTextView.setVisibility((View.INVISIBLE));
         finishButton.setVisibility(View.INVISIBLE);
+        finishTextViewAction.setVisibility(View.INVISIBLE);
         stopButton.setVisibility(View.VISIBLE);
         stopTextView.setVisibility(View.VISIBLE);
         exitButton.setVisibility(View.INVISIBLE);
@@ -817,8 +834,11 @@ public class MainActivity extends AppCompatActivity {
     //////////////////////////////////////////////////////////////////////////////
     public void setPhase4() {
         phase = 4;
-        goButton.setVisibility(View.INVISIBLE);
+//        goButton.setVisibility(View.INVISIBLE);
+        goTextView.setVisibility(View.INVISIBLE);
+        cancelTextView.setVisibility((View.INVISIBLE));
         finishButton.setVisibility(View.INVISIBLE);
+        finishTextViewAction.setVisibility(View.INVISIBLE);
         stopButton.setVisibility(View.INVISIBLE);
         exitButton.setVisibility(View.INVISIBLE);
         exitImageView.setVisibility(View.INVISIBLE);
