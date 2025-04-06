@@ -10,7 +10,7 @@
         <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_display_setup_user.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_history_score.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/activity_main_backup.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/nav_header.xml" value="0.4" />
         <entry key="..\:/Users/rondejka/AndroidStudioProjects/BreathExercise/app/src/main/res/layout/rowlayout.xml" value="0.25416666666666665" />
@@ -21,7 +21,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

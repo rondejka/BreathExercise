@@ -29,3 +29,4 @@ verzia bez zvuku dychania - pridane
 17.11.2022 - Cancel button - vo faze 4 neurobi nic - button skryty vo faze 4 - versionName "1.04221117"
 22.11.2022 - GO button prekryval na tablete odpocet - zmeneny layout_constraintTop_toBottomOf na breathdownTextView - versionName "1.04221117"
 27.11.2022 - Krajsie buttony Start/Stop/Finish - versionName "1.04221127"
+30.11.2022 - compileSdkVersion from 30 to 31

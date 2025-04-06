@@ -22,7 +22,8 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/white2" />
+        app:srcCompat="@drawable/white2"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/setupImageView"
@@ -30,7 +31,8 @@
         android:layout_height="40dp"
         android:onClick="setupParameters"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/setup_ico" />
+        app:srcCompat="@drawable/setup_ico"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/historyImageView"
@@ -39,7 +41,8 @@
         android:onClick="openDbHistoryScoreScreen"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/history_ico"
-        tools:layout_editor_absoluteX="100dp" />
+        tools:layout_editor_absoluteX="100dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/cloudImageView"
@@ -62,6 +65,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/exit2" />
 
+    <ImageView
+        android:id="@+id/testImageView"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="170dp"
+        android:alpha="0.4"
+        android:onClick="exitApp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/buttonbl" />
+
     <Button
         android:id="@+id/buttonSetup"
         android:layout_width="wrap_content"
@@ -70,7 +86,8 @@
         android:onClick="setupParameters"
         android:text="Setup"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonHistory"
@@ -102,7 +119,7 @@
         android:layout_marginTop="50dp"
         android:onClick="finishCountDown"
         android:text="FINISH"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goButton" />
@@ -189,7 +206,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:onClick="finishCountDown"
-        android:text="SaveStop"
+        android:text="@string/save_stop"
         android:textColor="#660000"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"

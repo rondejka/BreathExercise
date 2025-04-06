@@ -476,7 +476,7 @@ public class MainActivity extends AppCompatActivity {
     public void finishCountDown(View view) {
         Log.i("finishCountDown_01", "OK");
 
-        finishButton.setVisibility(View.INVISIBLE);
+//        finishButton.setVisibility(View.INVISIBLE);
         finishTextViewAction.setVisibility(View.INVISIBLE);
 
         //copy from phase 4
@@ -505,7 +505,7 @@ public class MainActivity extends AppCompatActivity {
 //        goButton.setText("CANCEL");
         goTextView.setVisibility((View.INVISIBLE));
         cancelTextView.setVisibility((View.VISIBLE));
-        clearTextVievs();
+        clearTextViews();
         userScore.initUserScore();
 
 
@@ -564,7 +564,7 @@ public class MainActivity extends AppCompatActivity {
         exitButton.setVisibility(View.INVISIBLE);
         exitImageView.setVisibility(View.VISIBLE);
 //        goButton.setText("START");
-        finishButton.setVisibility(View.INVISIBLE);
+//        finishButton.setVisibility(View.INVISIBLE);
         finishTextViewAction.setVisibility(View.INVISIBLE);
         goTextView.setVisibility((View.VISIBLE));
         cancelTextView.setVisibility((View.INVISIBLE));
@@ -579,7 +579,7 @@ public class MainActivity extends AppCompatActivity {
         phase = 1;
         exitButton.setVisibility(View.INVISIBLE);
         exitImageView.setVisibility(View.INVISIBLE);
-        finishButton.setVisibility(View.VISIBLE);
+//        finishButton.setVisibility(View.VISIBLE);
         finishTextViewAction.setVisibility(View.VISIBLE);
 //        goButton.setVisibility(View.VISIBLE);
         goTextView.setVisibility(View.INVISIBLE);
@@ -718,7 +718,7 @@ public class MainActivity extends AppCompatActivity {
 //        goButton.setVisibility(View.INVISIBLE);
         goTextView.setVisibility(View.INVISIBLE);
         cancelTextView.setVisibility((View.INVISIBLE));
-        finishButton.setVisibility(View.INVISIBLE);
+//        finishButton.setVisibility(View.INVISIBLE);
         finishTextViewAction.setVisibility(View.INVISIBLE);
         stopButton.setVisibility(View.VISIBLE);
         stopTextView.setVisibility(View.VISIBLE);
@@ -837,7 +837,7 @@ public class MainActivity extends AppCompatActivity {
 //        goButton.setVisibility(View.INVISIBLE);
         goTextView.setVisibility(View.INVISIBLE);
         cancelTextView.setVisibility((View.INVISIBLE));
-        finishButton.setVisibility(View.INVISIBLE);
+//        finishButton.setVisibility(View.INVISIBLE);
         finishTextViewAction.setVisibility(View.INVISIBLE);
         stopButton.setVisibility(View.INVISIBLE);
         exitButton.setVisibility(View.INVISIBLE);
@@ -887,7 +887,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //////////////////////////////////////////////////////////////////////////////
-    private void clearTextVievs() {
+    private void clearTextViews() {
         time01TexView.setText("");
         time02TexView.setText("");
         time03TexView.setText("");
@@ -965,8 +965,8 @@ public class MainActivity extends AppCompatActivity {
 //        viewAllDataFromDb();
         Log.i("saveScore_04", "OK");
 
-        saveScoreToCloud();
-        Log.i("saveScore_05", "OK");
+//        saveScoreToCloud();   //for AWS cloud
+//        Log.i("saveScore_05", "OK");
 
     }
 
@@ -1281,7 +1281,7 @@ public class MainActivity extends AppCompatActivity {
 
     //////////////////////////////////////////////////////////////////////////////
     // return average of max (ROUND_MAX - 1) times
-    // in 4 rounds excercice returns average of max 3 times
+    // in 4 rounds exercise returns average of max 3 times
     private float max3AvgTime() {
         float max3AvgTime = 0;
         int minTime = results[1];
@@ -1309,23 +1309,21 @@ public class MainActivity extends AppCompatActivity {
 
     //////////////////////////////////////////////////////////////////////////////
     // return average of max 2 times
-    // WRONG !!
     private float max2AvgTime() {
         float max2AvgTime = 0;
         int minTime = 0;
         int notNullResults = 0;
 
-        float max1 = results[1];
-        float max2 = results[2];
-        if (results[3] > max1) {
-            max1 = results[3];
-        } else if (results[3] > max2) {
-            max2 = results[3];
-        }
-        if (results[4] > max2) {
-            max2 = results[4];
-        } else if (results[4] > max1) {
-            max1 = results[4];
+        float max1 = 0;
+        float max2 = 0;
+
+        for (int i = 1; i <= round_MAX; i++) {
+            if (results[i] > max1) {
+                max2 = max1;
+                max1 = results[i];
+            } else if (results[i] > max2) {
+                max2 = results[i];
+            }
         }
 
         notNullResults = notNullResults();
@@ -1341,6 +1339,7 @@ public class MainActivity extends AppCompatActivity {
         max2AvgTime = (float) (Math.round(max2AvgTime * 100.0) / 100.0);
         return max2AvgTime;
     }
+
 
 
     //////////////////////////////////////////////////////////////////////////////
