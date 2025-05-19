@@ -299,6 +299,11 @@ public class MainActivity extends AppCompatActivity {
                 intentU.putExtra("PARAMETERS", parameters);
                 startActivity(intentU);
                 return true;
+            case R.id.nav_about:
+                Intent intentA = new Intent(this, AboutActivity.class);
+                intentA.putExtra("PARAMETERS", parameters);
+                startActivity(intentA);
+                return true;
         }
 
         return true;
@@ -912,6 +917,10 @@ public class MainActivity extends AppCompatActivity {
      * Called when the user taps the WEB button
      */
     public void openCloudScreen(View view) {
+        if(true) {
+            return;     //baseUrl in the called "CloudScore.class" is already not functioned
+        }
+
         Log.i("openCloud 01", "OK");
         Intent intent = new Intent(this, CloudScore.class);
         intent.putExtra("PARAMETERS", parameters);

@@ -14,6 +14,15 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".DisplayLogin"></activity>
         <activity
+            android:name=".AboutActivity"
+            android:parentActivityName=".MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ondejka.breathexercise.MainActivity" />
+        </activity>
+        <activity
             android:name=".CloudScore"
             android:parentActivityName=".MainActivity">
 

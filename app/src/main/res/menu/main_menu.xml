@@ -24,6 +24,13 @@
             android:icon="@android:drawable/ic_menu_myplaces"
             android:title="User"
             android:visible="true" />
+        <item
+            android:id="@+id/nav_about"
+            android:checkable="false"
+            android:enabled="true"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="About"
+            android:visible="true" />
     </group>
 
 </menu>
